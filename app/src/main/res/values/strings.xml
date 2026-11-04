@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Food Copilot</string>
+    <string name="service_description">Speaks what is on screen in Swiggy and Zomato and performs actions you confirm by voice.</string>
+</resources>
