@@ -36,7 +36,6 @@ Rules: keep speech short, max 4 items. Use only ids that are on the screen. Set 
                 put("system", systemPrompt)
                 put("user", "SCREEN:\n${screen.toPrompt()}\n\nUSER SAID: $userCommand")
             }
-            android.util.Log.d("CopilotSent", body.toString())
             val req = Request.Builder()
                 .url(proxyUrl)
                 .post(body.toString().toRequestBody("application/json".toMediaType()))
