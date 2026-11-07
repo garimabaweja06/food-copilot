@@ -131,7 +131,6 @@ class FoodCopilotService : AccessibilityService(), TextToSpeech.OnInitListener {
     }
 
     private fun handleUserSpeech(said: String) {
-        android.util.Log.d("CopilotHeard", said)
         val lower = said.lowercase()
 
         // 1) Waiting for a yes/no?
@@ -167,7 +166,6 @@ class FoodCopilotService : AccessibilityService(), TextToSpeech.OnInitListener {
         }
 
         // 4) Everything else: ask Gemini (1 request).
-        android.util.Log.d("CopilotHeard", "-> sent to AI")
         speak("One moment.")
         scope.launch {
             val d = llm.decide(screen, said)
